@@ -11,7 +11,6 @@ public class TestEventHandller {
 	@EventListener
 	@Async
 	public void cleanAndAssign(EmployeeEvent event) {
-		// Prepare the room for the next patient
 		System.out.println(
 				"Employee Service: test service 2 " + event.getEmpName() + " : " + Thread.currentThread().getName());
 	}
