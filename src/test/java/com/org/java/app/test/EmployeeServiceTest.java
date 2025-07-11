@@ -68,13 +68,13 @@ public class EmployeeServiceTest {
 
 		assertEquals(employeeId, emp1.get().getEmpId());
 		assertEquals(emp.getEmpName(), emp1.get().getEmpName());
-		assertEquals(emp.getEmpName(), emp1.get().getAge());
+		assertEquals(emp.getAge(), emp1.get().getAge());
 		assertEquals(emp.getSalary(), emp1.get().getSalary());
-		assertEquals(emp.getSalary(), emp1.get().getDesignation());
-		assertEquals(emp.getDepartmentId(), emp1.get().getPlateform());
-		assertEquals(emp.getDeptName(), emp1.get().getSector());
-		assertEquals(employeeId, emp1.get().getMobbileNumber());
-		assertEquals(employeeId, emp1.get().getEmail());
+		assertEquals(emp.getDesignation(), emp1.get().getDesignation());
+		assertEquals(emp.getPlateform(), emp1.get().getPlateform());
+		assertEquals(emp.getSector(), emp1.get().getSector());
+		assertEquals(emp.getMobbileNumber(), emp1.get().getMobbileNumber());
+		assertEquals(emp.getEmail(), emp1.get().getEmail());
 		assertEquals(emp.getDepartmentId(), emp1.get().getDepartmentId());
 		assertEquals(emp.getDeptName(), emp1.get().getDeptName());
 	}

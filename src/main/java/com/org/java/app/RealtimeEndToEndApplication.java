@@ -9,6 +9,8 @@ import java.io.ObjectOutputStream;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 import com.org.java.app.designpatteran.EnumSingletonTest;
@@ -16,10 +18,14 @@ import com.org.java.app.designpatteran.Singleton;
 
 @SpringBootApplication
 @EnableAsync
-public class RealtimeEndToEndApplication {
+public class RealtimeEndToEndApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException, CloneNotSupportedException {
 		SpringApplication.run(RealtimeEndToEndApplication.class, args);
+		
+		
+		
+		
 		
 		Singleton orginalsingleton=Singleton.getInstance();
 		System.out.println("Orginalsingleton is::"+orginalsingleton.hashCode());
@@ -68,5 +74,9 @@ public class RealtimeEndToEndApplication {
 		t4.start();
 		
 	}
+	@Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(RealtimeEndToEndApplication.class);
+    }
 
 }
