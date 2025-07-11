@@ -27,7 +27,7 @@ public class RealtimeEndToEndApplication {
 		
 		Singleton Orginalsingleton2=Singleton.getInstance();
 		System.out.println("Orginalsingleton2 is::"+Orginalsingleton2.hashCode());
-	
+	System.out.println("hello");
 		
 		//Break the singleton  class 3 ways
 		// refection
