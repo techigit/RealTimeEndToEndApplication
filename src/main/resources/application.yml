@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: RealtimeEndToEndApplication
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/javatechi?allowPublicKeyRetrieval=true&useSSL=false
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
