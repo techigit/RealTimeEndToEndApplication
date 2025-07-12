@@ -79,7 +79,8 @@
 	</dependencies>
 
 	<build>
-	<finalName>springboot-tomcat-pipeline</finalName>
+	<!--<finalName>springboot-tomcat-pipeline</finalName>-->
+	<finalName>springboot-docker-pipeline</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
