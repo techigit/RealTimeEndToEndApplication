@@ -15,8 +15,8 @@ spring:
 #    - test
 logging:
   file:
-    name: C:/Users/Home/Desktop/logs/springbootapplication.log
-#management:
-#  tracing:
-#    sampling:
-#      probability: 1.0
+    name: C:/Users/HI/OneDrive/Desktop/logs/springbootapplication.log
+management:
+  tracing:
+    sampling:
+     probability: 1.0

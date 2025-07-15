@@ -22,7 +22,7 @@ public class RealtimeEndToEndApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException, CloneNotSupportedException {
 		SpringApplication.run(RealtimeEndToEndApplication.class, args);
-		
+		 
 		
 		
 		

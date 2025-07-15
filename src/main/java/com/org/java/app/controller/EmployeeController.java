@@ -31,7 +31,7 @@ public class EmployeeController {
 	
 	Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
-	@Autowired
+	@Autowired 
 	private EmployeeService employeeService;
 	
 	@GetMapping("/welcome")
@@ -43,7 +43,9 @@ public class EmployeeController {
 
 	@PostMapping("/save")
 	public ResponseEntity<Employee> addEmployee(@RequestBody EmployeeDto employeeDto) {
+		logger.info("getting started for saveing....");
 		Employee emp = employeeService.saveEmployeeDetails(employeeDto);
+		logger.info("suscessfullly employee got saved"+ emp);
 		return new ResponseEntity<Employee>(emp, HttpStatus.CREATED);
 	}
 	
@@ -56,6 +58,7 @@ public class EmployeeController {
 	@DeleteMapping("/delete")
 	public ResponseEntity<Employee> deletEmployee(@RequestBody Employee employee) {
 		Employee emp = employeeService.deleteEmployeeDetails(employee);
+		logger.info("sucessfully employeee record got deleted"+emp);
 		return new ResponseEntity("Sucessfully deleted from DB", HttpStatus.NO_CONTENT);
 	}
 
@@ -73,7 +76,9 @@ public class EmployeeController {
 
 	@GetMapping("/findAll")
 	public ResponseEntity<EmployeeDto> findAllEmployee() {
+		logger.info("getting start the records for fetching");
 		List<EmployeeDto> list = employeeService.findAllEmployeeDetails();
+		logger.info("got all the records"+list);
 		return new ResponseEntity(list, HttpStatus.OK);
 
 	}
